@@ -1,4 +1,4 @@
-development:
+production:
  adapter: postgresql
  port: 5432
  username: postgres
