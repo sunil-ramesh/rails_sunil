@@ -51826,3 +51826,69 @@ Completed 200 OK in 172ms (Views: 90.4ms | ActiveRecord: 40.7ms)
 
 
 Started GET "/assets/image-8fa02d1e888b5b66dcdbace3bbf2c2b3a144405af85af28ebf4e5b585bdb229e.jpg" for 127.0.0.1 at 2016-12-13 12:26:00 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 15:58:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/common/_flash_message.html.erb (0.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (16.6ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1525ms (Views: 1515.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 15:58:09 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/common/_flash_message.html.erb (0.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2016-12-13 15:58:18 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k+MkHAJZW1IWDxVDNUPN2oLMLqbT5S+cJ0Cg2ZVz06Ddzr7bQw1WARyAr5a1E5hUAZoLYIbEaK6pa1sHcg0JUQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 15:58:18 +0530
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/common/_flash_message.html.erb (0.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-13 15:58:21 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/new" for 127.0.0.1 at 2016-12-13 15:58:25 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QdavGUuc2VW4j8R/Z6CavU4Ru9wgZv7PJbp2QzKwnGgP+zXeCsjUBrIAfqrn8M8zzUeeGnVHuf2rkY2d1c5GmQ==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"", "phone_number"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save User"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-12-13 15:58:25 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-13 15:58:28 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.0ms)
