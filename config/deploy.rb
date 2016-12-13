@@ -2,7 +2,7 @@
 lock '3.7.0'
 
 set :application, 'event'
-set :repo_url, 'https://github.com/sunil-ramesh/rails_application.git'
+set :repo_url, 'https://github.com/sunil-ramesh/rails_sunil.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
