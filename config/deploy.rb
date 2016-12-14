@@ -2,7 +2,7 @@
 lock '3.7.0'
 
 set :application, 'rails_sunil'
-set :repo_url, 'https://github.com/sunil-ramesh/rails_sunil.git'
+set :repo_url, 'git@github.com:sunil-ramesh/rails_sunil.git'
 set :branch, 'master'
 set :user, 'deploy'
 
