@@ -7,7 +7,7 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-set :stage, :development
+set :stage, :production
 set :branch, :master
 set :user, "deploy"
 set :deploy_to, '/u01/apps/qwinix/production-sunil'
