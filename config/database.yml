@@ -2,6 +2,6 @@ production:
  adapter: postgresql
  port: 5432
  username: postgres
- password: password
+ password: 
  database: event_database
  host:  localhost
