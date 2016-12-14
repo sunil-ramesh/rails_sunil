@@ -3,6 +3,8 @@ lock '3.7.0'
 
 set :application, 'rails_sunil'
 set :repo_url, 'https://github.com/sunil-ramesh/rails_sunil.git'
+set :branch, 'master'
+set :user, 'deploy'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -11,7 +13,7 @@ set :repo_url, 'https://github.com/sunil-ramesh/rails_sunil.git'
 # set :deploy_to, '/var/www/my_app_name'
 
 # Default value for :scm is :git
-# set :scm, :git
+set :scm, :git
 
 # Default value for :format is :pretty
 # set :format, :pretty
