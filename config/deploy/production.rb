@@ -24,10 +24,10 @@ set :deploy_to, '/u01/apps/qwinix/production-sunil'
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-role :app, %w{deploy@192.168.2.174}
-role :web, %w{deploy@192.168.2.174}
-role :db, %w{deploy@192.168.2.174}
-server '192.168.2.174', roles: %w{:web, :app, :db}, user: 'deploy'
+role :app, %w{deploy@sunil.qwinix.io}
+role :web, %w{deploy@sunil.qwinix.io}
+role :db, %w{deploy@sunil.qwinix.io}
+server 'sunil.qwinix.io', roles: %w{:web, :app, :db}, user: 'deploy'
 
 # Configuration
 # =============
