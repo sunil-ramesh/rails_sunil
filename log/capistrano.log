@@ -7351,3 +7351,133 @@ ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Avai
 /home/deploy/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
  DEBUG [75bac8dd] 	Tasks: TOP => environment
 (See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-14 17:41:20 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5f01a69d] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.2.174
+ DEBUG [5f01a69d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5f01a69d] Finished in 0.588 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-event-production-sunil.sh 0.0%
+  INFO Uploading /tmp/git-ssh-event-production-sunil.sh 100.0%
+  INFO [67ff6ee6] Running /usr/bin/env chmod 700 /tmp/git-ssh-event-production-sunil.sh as deploy@192.168.2.174
+ DEBUG [67ff6ee6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-event-production-sunil.sh
+  INFO [67ff6ee6] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [a2fa6800] Running /usr/bin/env git ls-remote --heads https://github.com/sunil-ramesh/rails_sunil.git as deploy@192.168.2.174
+ DEBUG [a2fa6800] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-event-production-sunil.sh" ; /usr/bin/env git ls-remote --heads https://github.com/sunil-ramesh/rails_sunil.git )
+ DEBUG [a2fa6800] 	5ad2342092498d771dd6b4b91cbda3d05c815171	refs/heads/master
+  INFO [a2fa6800] Finished in 6.562 seconds with exit status 0 (successful).
+  INFO [006be84a] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/shared /u01/apps/qwinix/production-sunil/releases as deploy@192.168.2.174
+ DEBUG [006be84a] Command: /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/shared /u01/apps/qwinix/production-sunil/releases
+  INFO [006be84a] Finished in 0.469 seconds with exit status 0 (successful).
+  INFO [b7311bfa] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/shared/public/assets as deploy@192.168.2.174
+ DEBUG [b7311bfa] Command: /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/shared/public/assets
+  INFO [b7311bfa] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [afd19175] Running [ -f /u01/apps/qwinix/production-sunil/current/REVISION ] as deploy@192.168.2.174
+ DEBUG [afd19175] Command: [ -f /u01/apps/qwinix/production-sunil/current/REVISION ]
+ DEBUG [afd19175] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [5229c883] Running /usr/bin/env cat /u01/apps/qwinix/production-sunil/current/REVISION 2>/dev/null as deploy@192.168.2.174
+ DEBUG [5229c883] Command: /usr/bin/env cat /u01/apps/qwinix/production-sunil/current/REVISION 2>/dev/null
+ DEBUG [5229c883] 	52c2bb72947bd17b28e2c7adcc8fbf2ef4ff9c5b
+ DEBUG [5229c883] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [5ecd6066] Running [ -f /u01/apps/qwinix/production-sunil/repo/HEAD ] as deploy@192.168.2.174
+ DEBUG [5ecd6066] Command: [ -f /u01/apps/qwinix/production-sunil/repo/HEAD ]
+ DEBUG [5ecd6066] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /u01/apps/qwinix/production-sunil/repo
+ DEBUG [091b4e65] Running if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [091b4e65] Command: if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi
+ DEBUG [091b4e65] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [34afd5fa] Running /usr/bin/env git remote update --prune as deploy@192.168.2.174
+ DEBUG [34afd5fa] Command: cd /u01/apps/qwinix/production-sunil/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-event-production-sunil.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [34afd5fa] 	Fetching origin
+  INFO [34afd5fa] Finished in 6.416 seconds with exit status 0 (successful).
+ DEBUG [20fbcbb6] Running if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [20fbcbb6] Command: if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi
+ DEBUG [20fbcbb6] Finished in 0.456 seconds with exit status 0 (successful).
+  INFO [095edb6d] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161214121128 as deploy@192.168.2.174
+ DEBUG [095edb6d] Command: cd /u01/apps/qwinix/production-sunil/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-event-production-sunil.sh" ; /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161214121128 )
+  INFO [095edb6d] Finished in 0.144 seconds with exit status 0 (successful).
+  INFO [51b485c4] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/production-sunil/releases/20161214121128 as deploy@192.168.2.174
+ DEBUG [51b485c4] Command: cd /u01/apps/qwinix/production-sunil/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-event-production-sunil.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/production-sunil/releases/20161214121128 )
+  INFO [51b485c4] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [9d8ca4cd] Running if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [9d8ca4cd] Command: if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi
+ DEBUG [9d8ca4cd] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [5d32514b] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.2.174
+ DEBUG [5d32514b] Command: cd /u01/apps/qwinix/production-sunil/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-event-production-sunil.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [5d32514b] 	52c2bb72947bd17b28e2c7adcc8fbf2ef4ff9c5b
+ DEBUG [5d32514b] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [51bc8559] Running if test ! -d /u01/apps/qwinix/production-sunil/releases/20161214121128; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161214121128'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [51bc8559] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases/20161214121128; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161214121128'" 1>&2; false; fi
+ DEBUG [51bc8559] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [8191aaeb] Running /usr/bin/env echo "52c2bb72947bd17b28e2c7adcc8fbf2ef4ff9c5b" >> REVISION as deploy@192.168.2.174
+ DEBUG [8191aaeb] Command: cd /u01/apps/qwinix/production-sunil/releases/20161214121128 && /usr/bin/env echo "52c2bb72947bd17b28e2c7adcc8fbf2ef4ff9c5b" >> REVISION
+  INFO [8191aaeb] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [ea0afc4f] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161214121128/public as deploy@192.168.2.174
+ DEBUG [ea0afc4f] Command: /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161214121128/public
+  INFO [ea0afc4f] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [5b67ab45] Running [ -L /u01/apps/qwinix/production-sunil/releases/20161214121128/public/assets ] as deploy@192.168.2.174
+ DEBUG [5b67ab45] Command: [ -L /u01/apps/qwinix/production-sunil/releases/20161214121128/public/assets ]
+ DEBUG [5b67ab45] Finished in 0.108 seconds with exit status 1 (failed).
+ DEBUG [4313d23f] Running [ -d /u01/apps/qwinix/production-sunil/releases/20161214121128/public/assets ] as deploy@192.168.2.174
+ DEBUG [4313d23f] Command: [ -d /u01/apps/qwinix/production-sunil/releases/20161214121128/public/assets ]
+ DEBUG [4313d23f] Finished in 0.091 seconds with exit status 1 (failed).
+  INFO [e1c400fa] Running /usr/bin/env ln -s /u01/apps/qwinix/production-sunil/shared/public/assets /u01/apps/qwinix/production-sunil/releases/20161214121128/public/assets as deploy@192.168.2.174
+ DEBUG [e1c400fa] Command: /usr/bin/env ln -s /u01/apps/qwinix/production-sunil/shared/public/assets /u01/apps/qwinix/production-sunil/releases/20161214121128/public/assets
+  INFO [e1c400fa] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [d6cf4eb7] Running if test ! -d /u01/apps/qwinix/production-sunil/releases/20161214121128; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161214121128'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [d6cf4eb7] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases/20161214121128; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161214121128'" 1>&2; false; fi
+ DEBUG [d6cf4eb7] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [add5c99e] Running /usr/bin/env bundle check --path /u01/apps/qwinix/production-sunil/shared/bundle as deploy@192.168.2.174
+ DEBUG [add5c99e] Command: cd /u01/apps/qwinix/production-sunil/releases/20161214121128 && /usr/bin/env bundle check --path /u01/apps/qwinix/production-sunil/shared/bundle
+ DEBUG [add5c99e] 	The following gems are missing
+ * debug_inspector (0.0.2)
+ * binding_of_caller (0.7.2)
+ * byebug (9.0.6)
+ DEBUG [add5c99e] 	 * coderay (1.1.1)
+ * method_source (0.8.2)
+ * slop (3.6.0)
+ DEBUG [add5c99e] 	 * pry (0.10.4)
+ * spring (2.0.0)
+ * web-console (2.3.0)
+Install missing gems with `bundle install`
+ DEBUG [add5c99e] Finished in 0.495 seconds with exit status 1 (failed).
+  INFO [b50da337] Running /usr/bin/env bundle install --path /u01/apps/qwinix/production-sunil/shared/bundle --without development test --deployment --quiet as deploy@192.168.2.174
+ DEBUG [b50da337] Command: cd /u01/apps/qwinix/production-sunil/releases/20161214121128 && /usr/bin/env bundle install --path /u01/apps/qwinix/production-sunil/shared/bundle --without development test --deployment --quiet
+  INFO [b50da337] Finished in 29.795 seconds with exit status 0 (successful).
+ DEBUG [a495caf8] Running if test ! -d /u01/apps/qwinix/production-sunil/releases/20161214121128; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161214121128'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [a495caf8] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases/20161214121128; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161214121128'" 1>&2; false; fi
+ DEBUG [a495caf8] Finished in 0.211 seconds with exit status 0 (successful).
+  INFO [9e7986a7] Running bundle exec rake assets:precompile as deploy@192.168.2.174
+ DEBUG [9e7986a7] Command: cd /u01/apps/qwinix/production-sunil/releases/20161214121128 && ( export RAILS_ENV="production" ; bundle exec rake assets:precompile )
+ DEBUG [9e7986a7] 	rake aborted!
+ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Available: ["development"]
+ DEBUG [9e7986a7] 	/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/connection_specification.rb:248:in `resolve_symbol_connection'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/connection_specification.rb:211:in `resolve_connection'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/connection_specification.rb:139:in `resolve'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/connection_specification.rb:169:in `spec'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_handling.rb:50:in `establish_connection'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/railtie.rb:120:in `block (2 levels) in <class:Railtie>'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/lazy_load_hooks.rb:28:in `block in on_load'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/lazy_load_hooks.rb:27:in `each'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/lazy_load_hooks.rb:27:in `on_load'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/railtie.rb:116:in `block in <class:Railtie>'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/railties-4.2.7.1/lib/rails/initializable.rb:30:in `instance_exec'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/railties-4.2.7.1/lib/rails/initializable.rb:30:in `run'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/railties-4.2.7.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/railties-4.2.7.1/lib/rails/initializable.rb:54:in `run_initializers'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/railties-4.2.7.1/lib/rails/application.rb:352:in `initialize!'
+/u01/apps/qwinix/production-sunil/releases/20161214121128/config/environment.rb:5:in `<top (required)>'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/dependencies.rb:274:in `require'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/dependencies.rb:274:in `block in require'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/dependencies.rb:240:in `load_dependency'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/dependencies.rb:274:in `require'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/railties-4.2.7.1/lib/rails/application.rb:328:in `require_environment!'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/railties-4.2.7.1/lib/rails/application.rb:457:in `block in run_tasks_blocks'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+/u01/apps/qwinix/production-sunil/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/deploy/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/deploy/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+Tasks: TOP => environment
+ DEBUG [9e7986a7] 	(See full trace by running task with --trace)
